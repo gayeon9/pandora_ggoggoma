@@ -10,5 +10,6 @@ public class MarkAnimationHandler : MonoBehaviour
 
         gameObject.SetActive(false);
 
+       
     }
 }

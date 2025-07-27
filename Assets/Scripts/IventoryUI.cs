@@ -33,6 +33,8 @@ public class IventoryUI : MonoBehaviour
       {
           for (int i = 0;  i < slots.Length; i++)
           {
+            slots[i].slotnum = i;
+
                   if(i< inven.SlotCnt)
                   slots[i].GetComponent<Button>().interactable = true;
                   else
@@ -57,17 +59,20 @@ public class IventoryUI : MonoBehaviour
 
     }
 
-    void RedrawSlotUI()
-    {
-        for (int i = 0; i < slots.Length; i++)
+        void RedrawSlotUI()
         {
-            slots[i].RemoveSlot();
+            for (int i = 0; i < slots.Length; i++)
+            {
+                slots[i].RemoveSlot(); slots[i].slotnum = i;
+            //다 지우고
         }
-        for (int i =  0; i < inven.items.Count; i++)
-        {
-            slots[i].item = inven.items[i];
-            slots[i].UpdateSlotUI();
+            for (int i =  0; i < inven.items.Count; i++)
+            {
+                slots[i].item = inven.items[i]; //슬롯에 인벤토리 items 할당?
+                slots[i].UpdateSlotUI();
+
+            }
+
 
         }
     }
-}
