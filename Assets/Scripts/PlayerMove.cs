@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static int Questnumber = 1; //임의적인
+
     public float maxSpeed;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -39,10 +41,10 @@ public class PlayerMove : MonoBehaviour
 
 
 
-    }
+}
 
-    // Update is called once per frame
-    public void Update()
+// Update is called once per frame
+public void Update()
     {
 
         //stop speed 

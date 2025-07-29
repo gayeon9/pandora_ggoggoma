@@ -10,6 +10,7 @@ public class ItemDatabase : MonoBehaviour
     {
       instance = this;
     }
+
     public List<Item>itemDB = new List<Item>();
     [Space(9)]
     //필드 아이템 프리팹 들고오기
@@ -18,10 +19,13 @@ public class ItemDatabase : MonoBehaviour
 
     private void Start()
     {
-        int spawnCount = Mathf.Min(itemDB.Count, pos.Length);
+        int itemCount = Mathf.Min(itemDB.Count, pos.Length);
 
-        for (int i = 0; i < spawnCount; i++)
+        for (int i = 0; i < itemCount; i++)
         {
+            Item item = itemDB[i];
+            item.onUse = () => itemInitializer.Handle(item);
+
             GameObject go = Instantiate(fieldItemPrefabs, pos[i], Quaternion.identity);
             FieldItems fieldItem = go.GetComponent<FieldItems>();
 
