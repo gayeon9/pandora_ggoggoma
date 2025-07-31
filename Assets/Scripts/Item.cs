@@ -10,6 +10,23 @@
         Jar,
         Newspaper,
         PigBlood,
+        Knife, //단검(피 x)
+        Knifeb, //단검(피o)
+        Notebook,//거핀의 수첩
+        Clothesb, //피가 묻은 하인복
+        Clothesold, //낡은 하인복
+        Clothest, //훔친 하인복
+        Glass, //유리병
+        well, //우물
+
+        Mop, //대걸레
+
+
+
+
+
+
+
         Etc
     }
 
