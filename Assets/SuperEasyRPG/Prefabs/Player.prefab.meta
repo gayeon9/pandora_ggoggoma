@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1aa57299bd2801647ab4f39145fafe29
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Prefabs/Player.prefab
+  uploadId: 765140

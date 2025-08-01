@@ -111,9 +111,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
-
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("FieldItem"))
@@ -141,7 +138,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void ADDandDestroyFromField()
+    public void DestroyFromFieldandAdd()
     {
 
         if (AddItem(currentFieldItem.GetItem()))
@@ -171,8 +168,8 @@ public class Inventory : MonoBehaviour
             bool isDestroyed = item.Use(); // Use() 내부에서 onUse.Invoke() 실행
             if (isDestroyed)
             {
-                ADDandDestroyFromField();
-                Debug.Log("성공적으로 삭제~");
+                DestroyFromFieldandAdd();
+                Debug.Log("성공적으로 삭제");
             }
             else Debug.Log("삭제 실패");
 

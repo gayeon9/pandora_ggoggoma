@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b0b9d607b30969499cf4401a5e1ecb4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Prefabs/TriggerArea.prefab
+  uploadId: 765140

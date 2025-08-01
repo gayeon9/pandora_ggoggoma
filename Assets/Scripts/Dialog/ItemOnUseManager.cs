@@ -4,7 +4,7 @@ public class ItemOnUseManager
 {
 
 
-     public static bool Execute(Item item)
+     public static void Execute(Item item)
     {
         switch (item.itemType)
         {
@@ -12,16 +12,20 @@ public class ItemOnUseManager
             case ItemType.Mouse:
                 item.onUse = () => ExecuteMouse(item);
                 Debug.Log("mouse 아이템 델리게이트 변수에 함수 넣기 성공");
-                return false;
+                return;
 
             case ItemType.Jar:
                 item.onUse = () => ExecuteJar(item);
                 Debug.Log("jar 아이템 델리게이트 변수에 함수 넣기 성공");
+                return;
 
-                return true;
+            case ItemType.Bucket:
+                item.onUse = () => ExecuteBucket(item);
+                Debug.Log("mouse 아이템 델리게이트 변수에 함수 넣기 성공");
+                return;
 
             default:
-                return false;
+                return;
         }
     }
 
@@ -36,7 +40,7 @@ public class ItemOnUseManager
                     new[] { "첫 번째 문장" },
                     DialogueMode.Dialogue
                 );
-                item.itemLevel++; item.consumable = false;
+                item.itemLevel++;// item.consumable = false;
                 return false; 
 
             case 1:
@@ -51,7 +55,7 @@ public class ItemOnUseManager
                     new[] { "세 번쨰 문장, 습득O" },
                     DialogueMode.Explanation
                 );
-                item.itemLevel++; item.consumable = true;
+                item.itemLevel++; //item.consumable = true;
                 return true;
              
             case 3:
@@ -80,7 +84,7 @@ public class ItemOnUseManager
                     DialogueMode.Dialogue
                 );
      
-                return true;
+                return false;
 
             
 
@@ -88,6 +92,24 @@ public class ItemOnUseManager
                 return false;
         }
     }
+
+    private static bool ExecuteBucket(Item item)
+    {
+        switch (item.itemLevel)
+        {
+            case 0:
+                DialogueManager.Instance.StartDialogue(
+                    new[] { "돼지의 피가 담긴 양동이", "어째서 양이 적다." },
+                    DialogueMode.Dialogue
+                );
+
+                return false;
+
+            default:
+                return false;
+        }
+    }
+
 
 
 

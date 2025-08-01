@@ -10,6 +10,7 @@
         Jar,
         Newspaper,
         PigBlood,
+        Bucket,
         Etc
     }
 
@@ -17,14 +18,18 @@
     public class Item 
     {
         public ItemType itemType;
+    
         public string itemName;
         public int itemLevel;
         public Sprite itemImage;
+        public Sprite borderImage;
         public Func<bool> onUse;      // 클릭 시 행동
-        public bool consumable;       // 사용 후 제거 여부
+        public bool consumable;
+        public Vector3 itemScale = Vector3.one; 
+    // 사용 후 제거 여부
     public bool Use()
     {
-        return (onUse?.Invoke() ?? false) && consumable;
+        return (onUse?.Invoke() ?? false);// && consumable;
     }
 }
 

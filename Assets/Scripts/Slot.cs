@@ -19,7 +19,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler
 
     public void RemoveSlot() 
     {
-        item = null  ;
+        item = null;
         itemIcon.gameObject.SetActive(false);
 
     }

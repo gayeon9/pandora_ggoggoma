@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 934a01230006d064d977b68d87e20838
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Prefabs/SuperEasyRPG Manager.prefab
+  uploadId: 765140
