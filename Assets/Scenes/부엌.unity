@@ -4464,26 +4464,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDB:
-  - itemType: 1
-    itemName: Jar
-    itemLevel: 1
-    itemImage: {fileID: 5934426167403820858, guid: cbabe1025f3dcf14e9d1e4707f56ed97, type: 3}
-    consumable: 0
   - itemType: 0
     itemName: Mouse
-    itemLevel: 1
+    itemLevel: 0
     itemImage: {fileID: -6672854466922126967, guid: 048fb7e25ce3d4d4da0983ddba1e9c82, type: 3}
+    borderImage: {fileID: 0}
     consumable: 0
-  - itemType: 4
-    itemName: Mouse
-    itemLevel: 1
-    itemImage: {fileID: -4696760917660491729, guid: c328af212bfc77d46bbdadb7ba8f6ba6, type: 3}
+    itemScale: {x: 0.7, y: 0.7, z: 0}
+  - itemType: 1
+    itemName: Jar
+    itemLevel: 0
+    itemImage: {fileID: 293989491115295977, guid: d0781549752a7b247ad86c6abda2ede0, type: 3}
+    borderImage: {fileID: -730343409950865161, guid: de6fbe7a489a9df4fa6198cd2e074a4c, type: 3}
     consumable: 0
-  fieldItemPrefabs: {fileID: 2702650540622869097, guid: b05afed55a815144386821063535bef8, type: 3}
+    itemScale: {x: 0.5, y: 0.5, z: 0}
+  - itemType: 3
+    itemName: PigBlood
+    itemLevel: 0
+    itemImage: {fileID: -5851469176857270385, guid: 8ea386f5b6880b54c9f6266852bfa580, type: 3}
+    borderImage: {fileID: 0}
+    consumable: 0
+    itemScale: {x: 0.4, y: 0.4, z: 0}
+  - itemType: 3
+    itemName: PigBlood
+    itemLevel: 0
+    itemImage: {fileID: -5851469176857270385, guid: 8ea386f5b6880b54c9f6266852bfa580, type: 3}
+    borderImage: {fileID: 0}
+    consumable: 0
+    itemScale: {x: 0.5, y: 0.5, z: 0}
+  fieldItemPrefabs: {fileID: 2253277417382152004, guid: b05afed55a815144386821063535bef8, type: 3}
   pos:
-  - {x: 3.68, y: -0.48, z: 0}
-  - {x: 6.78, y: -4.33, z: 0}
-  - {x: -6.06, y: -3.39, z: 0}
+  - {x: 3, y: 0, z: 0}
+  - {x: -6, y: 0, z: 0}
+  - {x: -13, y: 0, z: 0}
+  - {x: -18, y: 0, z: 0}
 --- !u!4 &1728996285
 Transform:
   m_ObjectHideFlags: 0
