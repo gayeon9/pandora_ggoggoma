@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ffdc7281c6c8cba4fac2371ca04f598c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Textures/VideoRenderTexture.renderTexture
+  uploadId: 765140

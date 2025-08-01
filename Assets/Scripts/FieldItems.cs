@@ -18,13 +18,35 @@ public class FieldItems : MonoBehaviour
             itemImage = _item.itemImage,
             itemType = _item.itemType,
             onUse = _item.onUse,
-            consumable = _item.consumable
+            consumable = _item.consumable,
+            itemScale = _item.itemScale,
+            borderImage = _item.borderImage
+
         };
 
         image.sprite = item.itemImage;
 
-    }
-    public Item GetItem()
+        Transform borderTransform = transform.Find("Border");
+        if (borderTransform != null)
+        {
+            SpriteRenderer borderRenderer = borderTransform.GetComponent<SpriteRenderer>();
+            if (borderRenderer != null && item.borderImage != null)
+            {
+                borderRenderer.sprite = item.borderImage;
+            }
+            else
+            {
+                Debug.LogWarning("Border SpriteRenderer가 없거나 이미지가 비어있습니다.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("자식 오브젝트 'Border'를 찾을 수 없습니다.");
+        }
+    
+
+}
+public Item GetItem()
     {
 
        return item;// 필드에서 얻는

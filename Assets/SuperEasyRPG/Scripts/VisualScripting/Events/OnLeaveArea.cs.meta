@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 84c69ef2cae732d45acb3d4df94c74dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Scripts/VisualScripting/Events/OnLeaveArea.cs
+  uploadId: 765140
