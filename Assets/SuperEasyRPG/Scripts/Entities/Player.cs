@@ -110,7 +110,7 @@ namespace SuperEasyRPG
 
         private void FixedUpdate()
         {
-            rigidbody.velocity = moveVec;
+            rigidbody.linearVelocity = moveVec;
 
             ScanInteractiveObject();
         }

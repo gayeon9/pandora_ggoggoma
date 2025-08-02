@@ -55,7 +55,7 @@ public class ItemDatabase : MonoBehaviour
             //   Vector3 parentScale = go.transform.lossyScale;
             Vector3 parentScale = go.transform.lossyScale;
 
-            Vector3 safeScale = new Vector3(
+                Vector3 safeScale = new Vector3(
                 parentScale.x != 0 ? 1.5f / parentScale.x : 1f,
                 parentScale.y != 0 ? 1.5f / parentScale.y : 1f,
                 parentScale.z != 0 ? 1.5f / parentScale.z : 1f
