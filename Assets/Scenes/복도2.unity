@@ -1267,7 +1267,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6399997, y: -0.6099999, z: -10.019252}
+  m_LocalPosition: {x: -63.03, y: -0.6099999, z: -10.019252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4098,7 +4098,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 3448966779518188231, guid: 4e64328b074168d429b993c96639551b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.61, y: 5.48}
@@ -4116,7 +4116,7 @@ Transform:
   m_GameObject: {fileID: 1232225908}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.64, y: -0.61, z: -0.019251935}
+  m_LocalPosition: {x: -63.03, y: -0.61, z: -0.019251935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4985,7 +4985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1cb3e669f33485bac7df4f4acbab2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: "\uBCF5\uB3C41"
+  sceneToLoad: "\uBC1C\uC790\uAD6D\uC18C\uB9AC4"
 --- !u!61 &1592457872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6316,7 +6316,7 @@ Transform:
   m_GameObject: {fileID: 2040587822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6399997, y: -0.6099999, z: -10.019252}
+  m_LocalPosition: {x: -63.03, y: -0.6099999, z: -10.019252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
