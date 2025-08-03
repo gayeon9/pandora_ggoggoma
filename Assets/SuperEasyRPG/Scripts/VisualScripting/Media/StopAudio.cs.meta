@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c6772e9b4a7e1bc42b1a5f56527d2cf0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Scripts/VisualScripting/Media/StopAudio.cs
+  uploadId: 765140

@@ -1,8 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ItemOnUseManager
 {
-
 
     public static bool Execute(Item item)
     {
@@ -32,6 +32,13 @@ public class ItemOnUseManager
                 //
                 return true;
 
+
+            case ItemType.Glass:
+                item.onUse = () => ExecuteGlass(item);
+                Debug.Log("Clocthesold 아이템 델리게이트 변수에 함수 넣기 성공");
+                //
+                return true;
+
             default:
                 return false;
         }
@@ -39,42 +46,28 @@ public class ItemOnUseManager
 
     private static bool ExecuteMouse(Item item)
     {
+        GameObject Scriptmachine = GameObject.Find("Scriptmachine");
+
+
         switch (item.itemLevel)
         {
             case 0:
                 Debug.Log("mouse 아이템 델리게이트 변수있는 함수 호출 성공");
-
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "쥐를 잡자." },
-                    DialogueMode.Dialogue
-                );
-                item.itemLevel++; item.consumable = false;
-                return false;
+                CustomEvent.Trigger(Scriptmachine, "MouseEvent0");
+                item.itemLevel++; item.consumable = true;
+                return true;
 
             case 1:
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "쥐를 잡았다." },
-                    DialogueMode.Explanation
-                );
-                item.itemLevel++; item.consumable = true;
+                CustomEvent.Trigger(Scriptmachine, "MouseEvent1");
+                item.consumable = false;
                 return false;
 
-            /* case 2:
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "세 번쨰 문장, 습득X" },
-                    DialogueMode.Explanation
-                );
-                item.itemLevel++; 
-                return true;
-             
-            case 3:
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "습득되었을 때 여전히 같은 델리게이트 변수 공유함." },
-                    DialogueMode.Explanation
-                );
-                item.itemLevel++;
-                return false;  */
-
+            /*
+               case 2:
+                  CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
+                   item.consumable = false;
+                  return false;
+             */
 
 
             default:
@@ -100,6 +93,16 @@ public class ItemOnUseManager
 
             default:
                 return false;
+        }
+    }
+
+    private static bool ExecuteGlass(Item item)
+    {
+        switch (item.itemLevel)
+        {
+            case 0:  return true;
+            default:
+                return true;
         }
     }
 

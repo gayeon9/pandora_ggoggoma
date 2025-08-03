@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0770c8b157ec8be4f9663a9ace16c10d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Animation/Player Anim Controller Template.controller
+  uploadId: 765140

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8b41b20ad4b81c04e815d7093f42c0b1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Scripts/VisualScripting/Dialog/ShowSentenceDialog.cs
+  uploadId: 765140

@@ -28,15 +28,22 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         Debug.Log($"[DEBUG] {item?.itemName} 클릭됨");
+        ItemOnUseManager.Execute(item);
 
-        if (item != null && item.Use())
+        if (item != null)
         {
-            Debug.Log("[DEBUG] onUse 성공 → 아이템 삭제됨");
-            Inventory.instance.RemoveItem(slotnum);
+
+            bool isDestroyed = item.Use(); // Use() 내부에서 onUse.Invoke() 실행
+            if (isDestroyed)
+            {
+                Debug.Log("아이템 삭제됨");
+                Inventory.instance.RemoveItem(slotnum);
+            }
+            else
+            {
+                Debug.LogWarning($"아이템 삭제 X");
+            }
         }
-        else
-        {
-            Debug.LogWarning($"[DEBUG] onUse 실패 or null: {item?.itemName}");
-        }
+
     }
 }

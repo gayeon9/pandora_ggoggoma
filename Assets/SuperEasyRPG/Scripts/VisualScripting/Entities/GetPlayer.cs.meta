@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ad96f3e7a9c7d994983ee7346c9cfc58
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Scripts/VisualScripting/Entities/GetPlayer.cs
+  uploadId: 765140

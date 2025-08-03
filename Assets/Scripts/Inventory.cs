@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Inventory : MonoBehaviour
 {
@@ -74,7 +77,6 @@ public class Inventory : MonoBehaviour
 
 
     }
-
 
     private FieldItems currentFieldItem = null;
     private GameObject mark;
@@ -179,4 +181,15 @@ public class Inventory : MonoBehaviour
         }
 
     }
+
+
+
+
+    public bool HasItemType(ItemType type)
+    {
+        return items.Any(item => item.itemType == type);
     }
+
+
+
+}

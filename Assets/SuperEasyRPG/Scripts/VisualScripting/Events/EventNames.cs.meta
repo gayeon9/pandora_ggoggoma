@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f259b34777c929c4b8e09708e0d8fb9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 317013
+  packageName: Super Easy RPG
+  packageVersion: 1.1.0
+  assetPath: Assets/SuperEasyRPG/Scripts/VisualScripting/Events/EventNames.cs
+  uploadId: 765140
