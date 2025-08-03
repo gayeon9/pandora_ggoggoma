@@ -10,16 +10,17 @@
         Jar,
         Newspaper,
         PigBlood,
-        Knife, //´Ü°Ë(ÇÇ x)
-        Knifeb, //´Ü°Ë(ÇÇo)
-        Notebook,//°ÅÇÉÀÇ ¼öÃ¸
-        Clothesb, //ÇÇ°¡ ¹¯Àº ÇÏÀÎº¹
-        Clothesold, //³°Àº ÇÏÀÎº¹
-        Clothest, //ÈÉÄ£ ÇÏÀÎº¹
-        Glass, //À¯¸®º´
-        well, //¿ì¹°
+        Knife, //ë‹¨ê²€(í”¼ x)
+        Knifeb, //ë‹¨ê²€(í”¼o)
+        Notebook,//ê±°í•€ì˜ ìˆ˜ì²©
+        Clothesb, //í”¼ê°€ ë¬»ì€ í•˜ì¸ë³µ
+        Clothesold, //ë‚¡ì€ í•˜ì¸ë³µ
+        Clothest, //í›”ì¹œ í•˜ì¸ë³µ
+        Glass, //ìœ ë¦¬ë³‘
+        well, //ìš°ë¬¼
 
-        Mop, //´ë°É·¹
+        Mop, //ëŒ€ê±¸ë ˆ
+        wine, //ì™€ì¸
 
 
 
@@ -37,8 +38,8 @@
         public string itemName;
         public int itemLevel;
         public Sprite itemImage;
-        public Func<bool> onUse;      // Å¬¸¯ ½Ã Çàµ¿
-        public bool consumable;       // »ç¿ë ÈÄ Á¦°Å ¿©ºÎ
+        public Func<bool> onUse;      // í´ë¦­ ì‹œ í–‰ë™
+        public bool consumable;       // ì‚¬ìš© í›„ ì œê±° ì—¬ë¶€
     public bool Use()
     {
         return (onUse?.Invoke() ?? false) && consumable;

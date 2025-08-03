@@ -1,27 +1,21 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//í•„ë“œ ì•„ì´í…œ ìƒì„±í•  ìŠ¤í¬ë¦½íŠ¸ startë¡œ..
 
 public class ItemDatabase : MonoBehaviour
 {
     public static ItemDatabase instance;
-
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
+      instance = this;
     }
 
-    public List<Item> itemDB = new List<Item>();
-
+    public List<Item>itemDB = new List<Item>();
     [Space(9)]
+    //í•„ë“œ ì•„ì´í…œ í”„ë¦¬íŒ¹ ë“¤ê³ ì˜¤ê¸°
     public GameObject fieldItemPrefabs;
     public Vector3[] pos;
-
-    // ¿¹: itemInitializer´Â ¿ÜºÎ¿¡¼­ ÇÒ´çÇÏ°Å³ª null Ã³¸® ÇÊ¿ä
-    public itemInitializer itemInitializer;
 
     private void Start()
     {
@@ -37,32 +31,21 @@ public class ItemDatabase : MonoBehaviour
 
             if (fieldItem != null)
             {
-                // ¾ÈÀüÇÑ °íÀ¯ ID »ı¼º (¾ÀÀÌ¸§_¾ÆÀÌÅÛÅ¸ÀÔ_ÀÎµ¦½º)
-                string uniqueID = $"{SceneManager.GetActiveScene().name}_{item.itemType}_{i}";
-                fieldItem.itemID = uniqueID;
-
-                fieldItem.SetItem(item);
+                fieldItem.SetItem(itemDB[i]);  // itemDB[i]ì™€ pos[i] 1:1 ëŒ€ì‘
             }
             else
             {
-                Debug.LogWarning("FieldItems ÄÄÆ÷³ÍÆ®°¡ ÇÁ¸®ÆÕ¿¡ ¾ø½À´Ï´Ù.");
+                Debug.LogWarning("FieldItems ì»´í¬ë„ŒíŠ¸ê°€ í”„ë¦¬íŒ¹ì— ì—†ìŠµë‹ˆë‹¤.");
             }
         }
+        /*   for (int i = 0; i < 5; i++)
+          {
+              GameObject go = Instantiate(fieldItemPrefabs, pos[i], Quaternion.identity);
+              go.GetComponent<FieldItems>().SetItem(itemDB[i%3]);
 
-        //¾À¿¡ ÀÖ´Â ¾ÆÀÌÅÛ »óÅÂ ·Î±× Ãâ·Â(°ÔÀÓ Á¦ÀÛ ¿Ï·á ÈÄ »èÁ¦¿¹Á¤)
-        //¾ÆÀÌÅÛ·¹º§ ¿¬µ¿ È®ÀÎ¿ë
-        LogAllItemsInScene();
+          }
+        */
     }
 
-    private void LogAllItemsInScene()
-    {
-        FieldItems[] allItems = FindObjectsOfType<FieldItems>();
-
-        Debug.Log($"ÇöÀç ¾À '{SceneManager.GetActiveScene().name}' ¾ÆÀÌÅÛ °³¼ö: {allItems.Length}");
-
-        foreach (var fieldItem in allItems)
-        {
-            Debug.Log($"ID: {fieldItem.itemID}, ÀÌ¸§: {fieldItem.item.itemName}, ·¹º§: {fieldItem.item.itemLevel}");
-        }
-    }
 }
+    

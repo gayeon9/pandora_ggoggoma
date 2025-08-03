@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public class DialogueChoiceUI : MonoBehaviour
 {
-    public GameObject buttonPrefab;         // ¼±ÅÃÁö ¹öÆ° ÇÁ¸®ÆÕ
-    public Transform buttonContainer;       // ¹öÆ°µéÀÌ »ı¼ºµÉ À§Ä¡
+    public GameObject buttonPrefab;         // ì„ íƒì§€ ë²„íŠ¼ í”„ë¦¬íŒ¹
+    public Transform buttonContainer;       // ë²„íŠ¼ë“¤ì´ ìƒì„±ë  ìœ„ì¹˜
 
     private List<GameObject> spawnedButtons = new List<GameObject>();
 
@@ -24,7 +24,7 @@ public class DialogueChoiceUI : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 choice.onSelected?.Invoke();
-                ClearChoices(); // ¼±ÅÃ ÈÄ Á¦°Å
+                ClearChoices(); // ì„ íƒ í›„ ì œê±°
             });
 
             spawnedButtons.Add(buttonGO);

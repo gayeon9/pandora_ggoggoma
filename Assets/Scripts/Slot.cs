@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     public int slotnum;
 
     public Item item;
-    //image À¯´ÏÆ¼ ¿£Áø ´Ù¸¥°Å °¡´É¼º
+    //image ìœ ë‹ˆí‹° ì—”ì§„ ë‹¤ë¥¸ê±° ê°€ëŠ¥ì„±
     public Image itemIcon;
 
     public void UpdateSlotUI()
@@ -27,21 +27,21 @@ public class Slot : MonoBehaviour, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log($"[DEBUG] {item?.itemName} Å¬¸¯µÊ");
+        Debug.Log($"[DEBUG] {item?.itemName} í´ë¦­ë¨");
         ItemOnUseManager.Execute(item);
 
         if (item != null)
         {
 
-            bool isDestroyed = item.Use(); // Use() ³»ºÎ¿¡¼­ onUse.Invoke() ½ÇÇà
+            bool isDestroyed = item.Use(); // Use() ë‚´ë¶€ì—ì„œ onUse.Invoke() ì‹¤í–‰
             if (isDestroyed)
             {
-                Debug.Log("¾ÆÀÌÅÛ »èÁ¦µÊ");
+                Debug.Log("ì•„ì´í…œ ì‚­ì œë¨");
                 Inventory.instance.RemoveItem(slotnum);
             }
             else
             {
-                Debug.LogWarning($"¾ÆÀÌÅÛ »èÁ¦ X");
+                Debug.LogWarning($"ì•„ì´í…œ ì‚­ì œ X");
             }
         }
 

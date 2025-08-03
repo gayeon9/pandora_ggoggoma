@@ -3,24 +3,24 @@ using System.Collections.Generic;
 [System.Serializable]
 public class DialogChoice
 {
-    public string choiceText;                // ¼±ÅÃÁö ¹®±¸
-    public System.Action onSelected;        // ¼±ÅÃ ½Ã ½ÇÇàÇÒ ·ÎÁ÷
+    public string choiceText;                // ì„ íƒì§€ ë¬¸êµ¬
+    public System.Action onSelected;        // ì„ íƒ ì‹œ ì‹¤í–‰í•  ë¡œì§
 
     List<DialogChoice> choices = new List<DialogChoice>
 {
     new DialogChoice {
-        choiceText = "³õ¾ÆÁØ´Ù",
+        choiceText = "ë†“ì•„ì¤€ë‹¤",
         onSelected = () =>
         {
-            DialogueManager.Instance.StartDialogue(new[] { "Áã: °í¸¶¿ö¿ä. ÈùÆ®¸¦ µå¸±°Ô¿ä!" }, DialogueMode.Explanation);
-            // ¾ÆÀÌÅÛ »óÅÂ º¯È­, ÀÎº¥Åä¸® ¹ÌÃß°¡ µî Ã³¸®
+            DialogueManager.Instance.StartDialogue(new[] { "ì¥: ê³ ë§ˆì›Œìš”. íŒíŠ¸ë¥¼ ë“œë¦´ê²Œìš”!" }, DialogueMode.Explanation);
+            // ì•„ì´í…œ ìƒíƒœ ë³€í™”, ì¸ë²¤í† ë¦¬ ë¯¸ì¶”ê°€ ë“± ì²˜ë¦¬
         }
     },
     new DialogChoice {
-        choiceText = "Àâ¾ÆµĞ´Ù",
+        choiceText = "ì¡ì•„ë‘”ë‹¤",
         onSelected = () =>
         {
-            DialogueManager.Instance.StartDialogue(new[] { "ÁÖÀÎ°ø: ½È¾î. Áã¸¦ °¡µÖµĞ´Ù." }, DialogueMode.Dialogue);
+            DialogueManager.Instance.StartDialogue(new[] { "ì£¼ì¸ê³µ: ì‹«ì–´. ì¥ë¥¼ ê°€ë‘¬ë‘”ë‹¤." }, DialogueMode.Dialogue);
             
                         
         }

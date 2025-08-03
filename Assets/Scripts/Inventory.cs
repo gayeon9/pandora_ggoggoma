@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    //ÀÎ½ºÅÏ½º¸¦ ¾îµð¼­µç Á¢±ÙÇÒ ¼ö ÀÖÀ½.
+    //ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ð¼­µï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
         #region Singleton
         public static Inventory instance;
         private void Awake()
@@ -24,27 +24,27 @@ public class Inventory : MonoBehaviour
 
 
 
-    //¾Æ·¡´Â ÀÎº¥Åä¸®¿¡ º¯È­°¡ »ý°åÀ» ¶§ ±â´É ±¸Çö
+    //ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     
     public delegate void OnSlotCountChange(int val);
     public OnSlotCountChange onSlotCountChange;
 
     public delegate void OnChangeItem();
     public OnChangeItem onChangeItem;
-    //¾ÆÀÌÅÛ º¯È­, ¿ÜºÎ¿¡¼­ ´ÙÀ½°ú °°ÀÌ »ç¿ë°¡´É 
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­, ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ë°¡ï¿½ï¿½ 
     //Inventory.instance.onChangeItem += RefreshItemIcons;
-    //delegate : Æ÷ÀÎÅÍ¿Í À¯»ç °³³ä,ÇÔ¼ö ´ë¸® È£Ãâ
+    //delegate : ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½,ï¿½Ô¼ï¿½ ï¿½ë¸® È£ï¿½ï¿½
 
     private Animator markAnimator;
 
-    //È¹µæÇÑ ¾ÆÀÌÅÛÀ» ´ã´Â ¸®½ºÆ®
+    //È¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
     public List<Item> items = new List<Item>();
 
 
     private int slotCnt;
     public int SlotCnt
     {
-        //³»ºÎ slotCnt¸¦ º¸È£ÇÏ¸é¼­ ¿ÜºÎ¿¡¼­ °ªÀ» ÀÐÀ» ¼ö ÀÖµµ·ÏÇÔ.
+        //ï¿½ï¿½ï¿½ï¿½ slotCntï¿½ï¿½ ï¿½ï¿½È£ï¿½Ï¸é¼­ ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½.
         get => slotCnt;
         set
         {
@@ -132,7 +132,7 @@ public class Inventory : MonoBehaviour
                   {
 
                       markAnimator.enabled = true;
-                      markAnimator.Play("markoff", 0, 0f);  // "Show"´Â ¿øÇÏ´Â ¾Ö´Ï¸ÞÀÌ¼Ç Clip ÀÌ¸§
+                      markAnimator.Play("markoff", 0, 0f);  // "Show"ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ Clip ï¿½Ì¸ï¿½
                   }
 
               }
@@ -167,16 +167,16 @@ public class Inventory : MonoBehaviour
         if (currentFieldItem != null && Input.GetKeyDown(KeyCode.Space))
         {
             var item = currentFieldItem.GetItem();
-            // ¸Å¹ø µ¨¸®°ÔÀÌÆ® °»½Å
+            // ï¿½Å¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
             ItemOnUseManager.Execute(item);
 
-            bool isDestroyed = item.Use(); // Use() ³»ºÎ¿¡¼­ onUse.Invoke() ½ÇÇà
+            bool isDestroyed = item.Use(); // Use() ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ onUse.Invoke() ï¿½ï¿½ï¿½ï¿½
             if (isDestroyed)
             {
                 ADDandDestroyFromField();
-                Debug.Log("¼º°øÀûÀ¸·Î »èÁ¦~");
+                Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½~");
             }
-            else Debug.Log("»èÁ¦ ½ÇÆÐ");
+            else Debug.Log("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
         }
 

@@ -11,31 +11,31 @@ public class ItemOnUseManager
 
             case ItemType.Mouse:
                 item.onUse = () => ExecuteMouse(item);
-                Debug.Log("mouse ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼ö¿¡ ÇÔ¼ö ³Ö±â ¼º°ø");
+                Debug.Log("mouse ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ì— í•¨ìˆ˜ ë„£ê¸° ì„±ê³µ");
                 return false;
 
             case ItemType.Jar:
                 item.onUse = () => ExecuteJar(item);
-                Debug.Log("jar ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼ö¿¡ ÇÔ¼ö ³Ö±â ¼º°ø");
+                Debug.Log("jar ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ì— í•¨ìˆ˜ ë„£ê¸° ì„±ê³µ");
 
                 return true;
 
             case ItemType.Newspaper:
                 item.onUse = () => ExecuteNewspaper(item);
-                Debug.Log("newspaper ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼ö¿¡ ÇÔ¼ö ³Ö±â ¼º°ø");
+                Debug.Log("newspaper ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ì— í•¨ìˆ˜ ë„£ê¸° ì„±ê³µ");
                 //?? ??
                 return false;
 
             case ItemType.Clothesold:
                 item.onUse = () => ExecuteClothesold(item);
-                Debug.Log("Clocthesold ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼ö¿¡ ÇÔ¼ö ³Ö±â ¼º°ø");
+                Debug.Log("Clocthesold ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ì— í•¨ìˆ˜ ë„£ê¸° ì„±ê³µ");
                 //
                 return true;
 
 
             case ItemType.Glass:
                 item.onUse = () => ExecuteGlass(item);
-                Debug.Log("Clocthesold ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼ö¿¡ ÇÔ¼ö ³Ö±â ¼º°ø");
+                Debug.Log("Clocthesold ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ì— í•¨ìˆ˜ ë„£ê¸° ì„±ê³µ");
                 //
                 return true;
 
@@ -52,7 +52,7 @@ public class ItemOnUseManager
         switch (item.itemLevel)
         {
             case 0:
-                Debug.Log("mouse ¾ÆÀÌÅÛ µ¨¸®°ÔÀÌÆ® º¯¼öÀÖ´Â ÇÔ¼ö È£Ãâ ¼º°ø");
+                Debug.Log("mouse ì•„ì´í…œ ë¸ë¦¬ê²Œì´íŠ¸ ë³€ìˆ˜ìˆëŠ” í•¨ìˆ˜ í˜¸ì¶œ ì„±ê³µ");
                 CustomEvent.Trigger(Scriptmachine, "MouseEvent0");
                 item.itemLevel++; item.consumable = true;
                 return true;
@@ -82,7 +82,7 @@ public class ItemOnUseManager
         {
             case 0:
                 DialogueManager.Instance.StartDialogue(
-                    new[] { "±×·¯°íº¸´Ï ¿À´Ã ¸¸Âù¿¡ µÅÁö°í±â°¡ ³ª¿ÔÁö." },
+                    new[] { "ê·¸ëŸ¬ê³ ë³´ë‹ˆ ì˜¤ëŠ˜ ë§Œì°¬ì— ë¼ì§€ê³ ê¸°ê°€ ë‚˜ì™”ì§€." },
                     DialogueMode.Dialogue
                 );
               
@@ -113,7 +113,7 @@ public class ItemOnUseManager
         {
             case 0:
                 DialogueManager.Instance.StartDialogue(
-                    new[] { "½Å¹®ÀÌ´Ù." },
+                    new[] { "ì‹ ë¬¸ì´ë‹¤." },
                     DialogueMode.Dialogue
                     
                 );
@@ -134,7 +134,7 @@ public class ItemOnUseManager
         {
             case 0:
                 DialogueManager.Instance.StartDialogue(
-                    new[] { "³°Àº ÇÏÀÎº¹À» ¾î¶»°Ô ÇÒ±î?" },
+                    new[] { "ë‚¡ì€ í•˜ì¸ë³µì„ ì–´ë–»ê²Œ í• ê¹Œ?" },
                     DialogueMode.Dialogue
                 );
      

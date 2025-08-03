@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    [Header("UI ¿¬°á")]
+    [Header("UI ì—°ê²°")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
 
@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueMode currentMode;
 
-    // ´ÙÀÌ¾ó·Î±× Á¾·á ½Ã ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+    // ë‹¤ì´ì–¼ë¡œê·¸ ì¢…ë£Œ ì‹œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
     public event Action onDialogueEnd;
 
     private void Awake()
@@ -136,8 +136,8 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         explanationText.text = "";
 
-        //  Á¾·á ÀÌº¥Æ® È£Ãâ
+        //  ì¢…ë£Œ ì´ë²¤íŠ¸ í˜¸ì¶œ
         onDialogueEnd?.Invoke();
-        onDialogueEnd = null; // ÀÌº¥Æ® Áßº¹ ¹æÁö (ÇÑ ¹ø¸¸ ½ÇÇàµÇµµ·Ï)
+        onDialogueEnd = null; // ì´ë²¤íŠ¸ ì¤‘ë³µ ë°©ì§€ (í•œ ë²ˆë§Œ ì‹¤í–‰ë˜ë„ë¡)
     }
 }
