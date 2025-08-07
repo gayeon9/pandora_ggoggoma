@@ -19,7 +19,6 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject); //
     }
     #endregion
 
@@ -57,7 +56,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        slotCnt = 4;
+        slotCnt = 9;
     }
     public bool AddItem(Item _item)
     {

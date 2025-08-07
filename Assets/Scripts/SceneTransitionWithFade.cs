@@ -35,7 +35,7 @@ public class SceneTransitionWithFade : MonoBehaviour
             yield return null;
         }
 
-        audioSource.volume = 0;
+        audioSource.volume = 0; 
         audioSource.Stop();
 
         

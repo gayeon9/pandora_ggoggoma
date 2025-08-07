@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour
             return;
         }
         instance = this;
-        //DontDestroyOnLoad(gameObject); //
+        DontDestroyOnLoad(gameObject); //
 
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();

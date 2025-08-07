@@ -33,10 +33,10 @@ public class Slot : MonoBehaviour, IPointerUpHandler
         if (item != null)
         {
 
-            bool isDestroyed = item.Use(); // Use() 내부에서 onUse.Invoke() 실행
-            if (isDestroyed)
+        //    bool isDestroyed = item.Use(); // Use() 내부에서 onUse.Invoke() 실행
+            if (true)
             {
-                Debug.Log("아이템 삭제됨");
+                Debug.Log("아이템 삭제완료");
                 Inventory.instance.RemoveItem(slotnum);
             }
             else

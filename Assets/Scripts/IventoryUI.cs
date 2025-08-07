@@ -28,8 +28,9 @@ public class IventoryUI : MonoBehaviour
 
     }
 
-  
-       private void SlotChange(int val)
+ 
+
+    private void SlotChange(int val)
       {
           for (int i = 0;  i < slots.Length; i++)
           {
