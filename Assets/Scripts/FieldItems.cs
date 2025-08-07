@@ -27,8 +27,8 @@ public class FieldItems : MonoBehaviour
     public Item GetItem()
     {
 
-       return item;// �ʵ忡�� ���
-       
+        return item;// 필드에서 얻는
+
     }
 
 
@@ -38,5 +38,25 @@ public class FieldItems : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    
+
+
+    private void OnMouseDown()
+{
+    
+   //item.IncreaseLevel(); // 클릭 시 레벨 증가
+
+    if (Inventory.instance.AddItem(GetItem()))
+        {
+            Debug.Log(item.itemName + "을(를) 인벤토리에 추가했습니다.");
+            DestroyItem();
+        }
+        else
+        {
+            Debug.Log("인벤토리가 가득 찼습니다!");
+        }
+}
+
 
 }
+

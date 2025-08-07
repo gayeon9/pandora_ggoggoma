@@ -9,23 +9,24 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     //�ν��Ͻ��� ��𼭵� ������ �� ����.
-        #region Singleton
-        public static Inventory instance;
-        private void Awake()
-        { 
-            if (instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            instance = this;
+    #region Singleton
+    public static Inventory instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
         }
-        #endregion
+        instance = this;
+        DontDestroyOnLoad(gameObject); //
+    }
+    #endregion
 
 
 
     //�Ʒ��� �κ��丮�� ��ȭ�� ������ �� ��� ����
-    
+
     public delegate void OnSlotCountChange(int val);
     public OnSlotCountChange onSlotCountChange;
 
@@ -51,7 +52,7 @@ public class Inventory : MonoBehaviour
             slotCnt = value;
             onSlotCountChange.Invoke(slotCnt);
         }
-        
+
     }
 
     void Start()
@@ -60,11 +61,11 @@ public class Inventory : MonoBehaviour
     }
     public bool AddItem(Item _item)
     {
-        if(items.Count < SlotCnt)
+        if (items.Count < SlotCnt)
         {
             items.Add(_item);
-            if(onChangeItem != null)
-            onChangeItem.Invoke();
+            if (onChangeItem != null)
+                onChangeItem.Invoke();
             return true;
         }
         return false;
@@ -82,7 +83,7 @@ public class Inventory : MonoBehaviour
     private GameObject mark;
 
     private void OnTriggerEnter2D(Collider2D collision)
-      {
+    {
         if (collision.CompareTag("FieldItem"))
         {
             Debug.Log("mark active");
@@ -121,25 +122,25 @@ public class Inventory : MonoBehaviour
         if (collision.CompareTag("FieldItem"))
         {
 
-            
-               if (mark != null)
 
-              {
+            if (mark != null)
+
+            {
                 mark.SetActive(false);
 
                 Debug.Log("mark !active");
-                  if (markAnimator != null)
-                  {
+                if (markAnimator != null)
+                {
 
-                      markAnimator.enabled = true;
-                      markAnimator.Play("markoff", 0, 0f);  // "Show"�� ���ϴ� �ִϸ��̼� Clip �̸�
-                  }
+                    markAnimator.enabled = true;
+                    markAnimator.Play("markoff", 0, 0f);  // "Show"�� ���ϴ� �ִϸ��̼� Clip �̸�
+                }
 
-              }
+            }
 
-             
+
             currentFieldItem = null;
-            
+
         }
     }
 
@@ -189,7 +190,6 @@ public class Inventory : MonoBehaviour
     {
         return items.Any(item => item.itemType == type);
     }
-
 
 
 }

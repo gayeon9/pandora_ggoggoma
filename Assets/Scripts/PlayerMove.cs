@@ -3,14 +3,23 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+
+    public static PlayerMove instance;    //
     public static int Questnumber = 1; //임의적인
 
     public float maxSpeed;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     Animator anim;
-    void Awake()
+     void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        //DontDestroyOnLoad(gameObject); //
 
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
