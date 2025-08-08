@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     Animator anim;
-     void Awake()
+    void Awake()
     {
         if (instance != null)
         {
@@ -19,11 +19,12 @@ public class PlayerMove : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject); //
+
 
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()

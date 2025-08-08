@@ -36,8 +36,10 @@ public class FieldItems : MonoBehaviour
 
     public void DestroyItem()
     {
+
         gameObject.SetActive(false);
-      //  Destroy(gameObject);
+        //Destroy(gameObject);
+        
     }
     
 

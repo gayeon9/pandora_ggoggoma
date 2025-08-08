@@ -9,6 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d982309136ff949849eaeb25554ad9, type: 3}
-  m_Name: mouse
+  m_Script: {fileID: 11500000, guid: 8a9e040b8d49c7345a2f6ad5eb379056, type: 3}
+  m_Name: wine
   m_EditorClassIdentifier: 
+  itemType: 13
+  itemName: Wine
+  itemLevel: 0
+  itemImage: {fileID: 293989491115295977, guid: d0781549752a7b247ad86c6abda2ede0, type: 3}
+  consumable: 0
