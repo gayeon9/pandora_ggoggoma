@@ -25,9 +25,16 @@ public class SceneLoadModifer : MonoBehaviour
     {
         if (Inventory.instance != null)
         {
-            Inventory.instance.onChangeItem?.Invoke();
+            StartCoroutine(InvokeChangeItemNextFrame());
         }
     }
+
+    private IEnumerator InvokeChangeItemNextFrame()
+    {
+        yield return null; // 1프레임 대기
+        Inventory.instance.onChangeItem?.Invoke();
+    }
+
 
 
     private void OnSceneLoadedCamrea(Scene scene, LoadSceneMode mode)

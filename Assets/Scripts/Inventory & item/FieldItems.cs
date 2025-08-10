@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FieldItems : MonoBehaviour
@@ -37,8 +37,8 @@ public class FieldItems : MonoBehaviour
     public void DestroyItem()
     {
 
-        gameObject.SetActive(false);
-        //Destroy(gameObject);
+       gameObject.SetActive(false);
+      //  Destroy(gameObject);
         
     }
     
@@ -46,19 +46,20 @@ public class FieldItems : MonoBehaviour
 
     private void OnMouseDown()
 {
-    
-   //item.IncreaseLevel(); // 클릭 시 레벨 증가
-
-    if (Inventory.instance.AddItem(GetItem()))
-        {
-            Debug.Log(item.itemName + "을(를) 인벤토리에 추가했습니다.");
-            DestroyItem();
-        }
-        else
-        {
-            Debug.Log("인벤토리가 가득 찼습니다!");
-        }
-}
+        ItemOnUseManager.Execute(item);
+        if (item.Use()) { Inventory.instance.AddItem(item); }
+        //item.IncreaseLevel(); // 클릭 시 레벨 증가
+        //20250810
+        /*if (Inventory.instance.AddItem(GetItem()))
+            {
+                Debug.Log(item.itemName + "을(를) 인벤토리에 추가했습니다.");
+                DestroyItem();
+            }
+            else
+            {
+                Debug.Log("인벤토리가 가득 찼습니다!");
+            }*/
+    }
 
 
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 public class ItemLevelManager : MonoBehaviour
 {
     public static ItemLevelManager Instance;
-
     private Dictionary<string, int> itemLevels = new Dictionary<string, int>();
 
     private void Awake()

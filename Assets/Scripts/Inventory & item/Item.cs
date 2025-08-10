@@ -35,7 +35,7 @@ public class Item : ScriptableObject
 
     public bool Use()
     {
-        return (onUse?.Invoke() ?? false) && consumable;
+        return (onUse?.Invoke() ?? false) ;
     }
 
     public void IncreaseLevel()

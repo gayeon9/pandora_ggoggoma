@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mouse
   m_EditorClassIdentifier: 
   itemType: 0
-  itemName: 
-  itemLevel: 0
-  itemImage: {fileID: 8420485207997377320, guid: b015b3a89adb27c4a9758ff15f20d402, type: 3}
+  itemName: Mouse
+  itemLevel: 2
+  itemImage: {fileID: -3889079605473469285, guid: 8d7841b0e07215c43906acb538914666, type: 3}
   consumable: 0

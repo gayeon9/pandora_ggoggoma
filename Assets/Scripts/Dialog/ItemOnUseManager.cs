@@ -35,7 +35,7 @@ public class ItemOnUseManager
 
             case ItemType.Glass:
                 item.onUse = () => ExecuteGlass(item);
-                Debug.Log("Clocthesold 아이템 델리게이트 변수에 함수 넣기 성공");
+                Debug.Log("Glass 아이템 델리게이트 변수에 함수 넣기 성공");
                 //
                 return true;
 
@@ -51,48 +51,60 @@ public class ItemOnUseManager
 
         switch (item.itemLevel)
         {
-            case 0:
-                Debug.Log("mouse 아이템 델리게이트 변수있는 함수 호출 성공");
-                CustomEvent.Trigger(Scriptmachine, "MouseEvent0");
-                item.itemLevel++; item.consumable = true;
-                return true;
-
             case 1:
+                Debug.Log("mouse 아이템 델리게이트 변수있는 함수 호출 성공");
                 CustomEvent.Trigger(Scriptmachine, "MouseEvent1");
-                item.consumable = false;
+                 item.itemLevel++; //item.consumable = true;
                 return false;
-
-            /*
+            
                case 2:
                   CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
-                   item.consumable = false;
+               //   item.consumable = false;
                   return false;
-             */
+             
+
+              /*
+                 case 2:
+                    CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
+                     item.consumable = false;
+                    return false;
+               */
 
 
             default:
                 return false;
         }
+    
+    
+/*
+ *      public bool MouseEvent0_release(string itemType, int choiceIndex)
+    {
+        Debug.Log($"아이템 {itemType}, 선택지 {choiceIndex}");
+        // 여기서 후속 로직 실행
+        Inventory.instance.AddItem(item);
+
+        return true;
+
+    }
+ */
+
     }
 
+
+   
 
     private static bool ExecuteJar(Item item)
     {
         switch (item.itemLevel)
         {
             case 0:
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "그러고보니 오늘 만찬에 돼지고기가 나왔지." },
-                    DialogueMode.Dialogue
-                );
-              
-
+               
                 return true;
 
 
 
             default:
-                return false;
+                return true;
         }
     }
 

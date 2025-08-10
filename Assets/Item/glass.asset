@@ -15,5 +15,5 @@ MonoBehaviour:
   itemType: 10
   itemName: Glass
   itemLevel: 0
-  itemImage: {fileID: 5934426167403820858, guid: cbabe1025f3dcf14e9d1e4707f56ed97, type: 3}
+  itemImage: {fileID: -108878718900169398, guid: b2f4bfbb71e158642bc78c9b4fbaf570, type: 3}
   consumable: 0
