@@ -76,4 +76,8 @@ public class IventoryUI : MonoBehaviour
 
 
         }
-    }
+
+   // void OnEnable() { Inventory.instance.onChangeItem += RedrawSlotUI; }
+  //  void OnDisable() { Inventory.instance.onChangeItem -= RedrawSlotUI; }
+
+}

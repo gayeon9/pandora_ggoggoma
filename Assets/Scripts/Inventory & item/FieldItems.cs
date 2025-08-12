@@ -6,7 +6,7 @@ using UnityEngine;
 public class FieldItems : MonoBehaviour
 {
     public Item item;
-    public SpriteRenderer image;
+  //  public SpriteRenderer image;
 
 
 
@@ -21,7 +21,7 @@ public class FieldItems : MonoBehaviour
             consumable = _item.consumable
         };
 
-        image.sprite = item.itemImage;
+     //   image.sprite = item.itemImage;
 
     }
     public Item GetItem()
@@ -46,8 +46,29 @@ public class FieldItems : MonoBehaviour
 
     private void OnMouseDown()
 {
-        ItemOnUseManager.Execute(item);
-        if (item.Use()) { Inventory.instance.AddItem(item); }
+        /* if(item.onUse == null)
+         { ItemOnUseManager.Execute(item);
+             Debug.Log("20250812 아이템에 델리게이트 변수 집어넣음.");
+         }
+         if (item.Use()) { Inventory.instance.AddItem(item); Debug.Log(""); }
+ */
+
+        if (item != null)
+        {
+
+            Debug.Log($"[DEBUG] {item?.itemName} 필드에서 클릭됨");
+            if (item.onUse == null)
+            {
+               ItemOnUseManager.Execute(item);
+            } 
+            if (item.Use()) { Inventory.instance.AddItem(item); Debug.Log("아이템 획득"); }
+            else Debug.Log("델리게이트 집어넣기는 성공, 획득은 실패");
+            
+  
+
+        }
+        else Debug.Log("도대체 왜 아이템이 null인 것임.");
+
         //item.IncreaseLevel(); // 클릭 시 레벨 증가
         //20250810
         /*if (Inventory.instance.AddItem(GetItem()))

@@ -1,17 +1,25 @@
+using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ItemOnUseManager
+public class ItemOnUseManager 
 {
-
     public static bool Execute(Item item)
     {
         switch (item.itemType)
         {
 
+            case ItemType.Knifeb:
+                item.onUse = () => ExecuteKnifeb(item);
+                Debug.Log("Knifeb 아이템 델리게이트 변수에 함수 넣기 성공");
+                //
+                return false;
+
+
             case ItemType.Mouse:
                 item.onUse = () => ExecuteMouse(item);
-                Debug.Log("mouse 아이템 델리게이트 변수에 함수 넣기 성공");
+                Debug.Log("mouse 아이템 델리게이트 변수에 함수 넣기 성공, 아이템 레벨 : "+ item.itemLevel);
                 return false;
 
             case ItemType.Jar:
@@ -39,36 +47,68 @@ public class ItemOnUseManager
                 //
                 return true;
 
+         
+
+
             default:
-                return false;
+                return true;
         }
     }
+
+    private static bool ExecuteKnifeb(Item item)
+    {
+        GameObject Scriptmachine = GameObject.Find("Scriptmachine");
+
+        switch (item.itemLevel)
+        {
+            case 0:
+                Debug.Log("Knifeb 아이템 델리게이트 변수있는 함수 호출 성공");
+                CustomEvent.Trigger(Scriptmachine, "KnifeEvent");
+                return true;
+
+
+
+            default:
+                Debug.Log("Knifeb 아이템 델리게이트 변수있는 함수 호출 성공");
+
+                return true;
+        }
+    }
+
 
     private static bool ExecuteMouse(Item item)
     {
         GameObject Scriptmachine = GameObject.Find("Scriptmachine");
 
 
+
         switch (item.itemLevel)
         {
             case 1:
+
                 Debug.Log("mouse 아이템 델리게이트 변수있는 함수 호출 성공");
                 CustomEvent.Trigger(Scriptmachine, "MouseEvent1");
-                 item.itemLevel++; //item.consumable = true;
+                 item.itemLevel++;
                 return false;
             
                case 2:
-                  CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
-               //   item.consumable = false;
-                  return false;
-             
+                CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
+                return false; 
 
-              /*
-                 case 2:
-                    CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
-                     item.consumable = false;
-                    return false;
-               */
+               case 3:
+                CustomEvent.Trigger(Scriptmachine, "MouseEventWine");
+                return false;
+
+               case 4:
+                CustomEvent.Trigger(Scriptmachine, "MouseEvent4");
+                return false;
+
+            /*
+               case 2:
+                  CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
+                   item.consumable = false;
+                  return false;
+             */
 
 
             default:
@@ -98,7 +138,8 @@ public class ItemOnUseManager
         switch (item.itemLevel)
         {
             case 0:
-               
+                Debug.Log("mouse 아이템 델리게이트 변수있는 함수 호출 성공");
+
                 return true;
 
 
@@ -145,11 +186,7 @@ public class ItemOnUseManager
         switch (item.itemLevel)
         {
             case 0:
-                DialogueManager.Instance.StartDialogue(
-                    new[] { "낡은 하인복을 어떻게 할까?" },
-                    DialogueMode.Dialogue
-                );
-     
+                Debug.Log("옷 클릭 성공");
                 return true;
 
             
@@ -159,6 +196,7 @@ public class ItemOnUseManager
         }
     }
 
+    
 
 
 }

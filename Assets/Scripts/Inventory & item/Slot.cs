@@ -10,26 +10,30 @@ public class Slot : MonoBehaviour, IPointerUpHandler
     public Item item;
     //image 유니티 엔진 다른거 가능성
     public Image itemIcon;
-
+    public Sprite ItemImage { get; set; }
     public void UpdateSlotUI()
     {
         itemIcon.sprite = item.itemImage;
-        itemIcon.gameObject.SetActive(true);
+        if(itemIcon != null )  itemIcon.gameObject.SetActive(true);
+       
     }
 
-    public void RemoveSlot() 
+    public void RemoveSlot()
     {
-        item = null  ;
-        itemIcon.gameObject.SetActive(false);
-
+        item = null;
+        if (itemIcon != null) itemIcon.gameObject.SetActive(false);
+     
     }
-
-
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log($"[DEBUG] {item?.itemName} 클릭됨");
-        ItemOnUseManager.Execute(item);
-        item.Use();
+        if(item!=null)
+        {
+
+            Debug.Log($"[DEBUG] {item?.itemName} 클릭됨");
+            if (item.onUse == null)  ItemOnUseManager.Execute(item);
+            item.Use();
+
+        }
         /*  if (item != null)
           {
 

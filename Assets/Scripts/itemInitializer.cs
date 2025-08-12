@@ -13,7 +13,6 @@ public class itemInitializer : MonoBehaviour
 
     public static bool Handle(Item item)
     {
-
         string[] lines;
         bool delete;
 

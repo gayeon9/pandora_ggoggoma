@@ -72,78 +72,13 @@ public class Inventory : MonoBehaviour
     {
         items.RemoveAt(_index);
         onChangeItem.Invoke();
-
-
     }
 
     private FieldItems currentFieldItem = null;
     private GameObject mark;
 
-    /*
-     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("FieldItem"))
-        {
-            Debug.Log("mark active");
-            currentFieldItem = collision.GetComponent<FieldItems>();
 
-
-            Transform[] allChildren = currentFieldItem.GetComponentsInChildren<Transform>(true);
-            foreach (Transform child in allChildren)
-            {
-                if (child.name == "mark")
-                {
-                    Debug.Log("mark found");
-
-                    mark = child.gameObject;
-                    break;
-                }
-                else Debug.Log("mark !found");
-
-            }
-
-            if (mark != null)
-            {
-
-                mark.SetActive(true);
-
-            }
-
-        }
-    }
-
-
-
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("FieldItem"))
-        {
-
-
-            if (mark != null)
-
-            {
-                mark.SetActive(false);
-
-                Debug.Log("mark !active");
-                if (markAnimator != null)
-                {
-
-                    markAnimator.enabled = true;
-                    markAnimator.Play("markoff", 0, 0f);  // "Show"�� ���ϴ� �ִϸ��̼� Clip �̸�
-                }
-
-            }
-
-
-            currentFieldItem = null;
-
-        }
-    }
-     */
-
-    public void ADDandDestroyFromField()
+    public void AddItemAndDestroyFromField()
     {
 
         if (AddItem(currentFieldItem.GetItem()))
@@ -160,33 +95,6 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
-    /*
-         void Update()
-        {
-            if (currentFieldItem != null && Input.GetKeyDown(KeyCode.Space))
-            {
-                var item = currentFieldItem.GetItem();
-                // �Ź� ��������Ʈ ����
-                ItemOnUseManager.Execute(item);
-
-                bool isDestroyed = item.Use(); // ExecuteItem() ���ο��� onUse.Invoke() ����
-                if (isDestroyed)
-                {
-                    ADDandDestroyFromField();
-                    Debug.Log("���������� ����~");
-                }
-                else Debug.Log("���� ����");
-
-            }
-
-        }
-
-     */
-
-
-
     public bool HasItemType(ItemType type)
     {
         return items.Any(item => item.itemType == type);
