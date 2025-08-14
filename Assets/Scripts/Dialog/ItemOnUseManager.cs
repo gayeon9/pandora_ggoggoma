@@ -127,7 +127,7 @@ public class ItemOnUseManager
                 return false; 
 
                case 3:
-                CustomEvent.Trigger(Scriptmachine, "MouseEventWine");
+                CustomEvent.Trigger(Scriptmachine, "MouseEvent3");
                 return false;
 
                case 4:

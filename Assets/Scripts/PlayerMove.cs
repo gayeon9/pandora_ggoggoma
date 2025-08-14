@@ -13,18 +13,18 @@ public class PlayerMove : MonoBehaviour
     Animator anim;
     void Awake()
     {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-
+        /*  if (instance != null)
+          {
+              Destroy(gameObject);
+              return;
+          }
+          instance = this;
+  */
 
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        DontDestroyOnLoad(gameObject);
+     //   DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()

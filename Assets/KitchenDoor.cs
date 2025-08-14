@@ -23,7 +23,7 @@ public class KitchenDoor : MonoBehaviour
 
     private IEnumerator WaitThreeSeconds()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
     }
 
