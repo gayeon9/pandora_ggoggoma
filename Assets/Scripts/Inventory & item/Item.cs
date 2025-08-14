@@ -18,6 +18,8 @@ public enum ItemType
     Mop, // 대걸레
     wine, // 와인
     pail, //양동이
+
+    laundryroom, //세탁실
     Etc
 }
 

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: Opening
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":799.002,"y":-17.25427},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"dc9d2d03-792d-42d8-a5fe-392e2142caee","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"3dd50d37-f54c-4d52-a328-9eac1f1ddb15","$version":"A","$type":"Unity.VisualScripting.Update"},{"defaultValues":{"characterName":{"$content":"\ub369\ucee8
+      \uc655","$type":"System.String"},"sentence":{"$content":"\uce5c\uc560\ud558\ub294
+      \ub9e5\ubca0\uc2a4 \uc7a5\uad70, \uadf8\ub9ac\uace0 \ubc45\ucfe0\uc624 \uc7a5\uad70\uc774
+      \uc6a9\ub9f9\ud558\uac8c \ubc18\ub780\uc744 \uc9c4\uc555\ud574\uc8fc\uc5c8\uc73c\ub2c8
+      \uae30\uc058\uae30 \uc774\ub97c \ub370 \uc5c6\uc18c. \ud2b9\ud788\ub098 \ub9e5\ubca0\uc2a4
+      \uc7a5\uad70, \uac11\uc791\uc2a4\ub7fd\uac8c \uc790\ub124\uc758 \uc131\uc5d0
+      \ubc29\ubb38\ud558\uac8c \ub410\ub294\ub370\ub3c4 \uc6b0\ub9ac\ubcf4\ub2e4\ub3c4
+      \uc11c\ub458\ub7ec \uc6b0\ub9ac\ub97c \ubc18\uaca8\uc8fc\uc5c8\uc9c0. \uadf8\ub300\uc758
+      \uc5f4\uc758\uc5d0 \uac10\uaca9\ud558\uc9c0 \uc54a\uc744 \uc218 \uc5c6\ub124. 
+      ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":247.0,"y":-98.0},"guid":"fd8d5b0e-e426-4680-8b8a-a38c73928c43","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"13"},{"defaultValues":{"characterName":{"$content":"\ub9e5\ubca0\uc2a4
+      ","$type":"System.String"},"sentence":{"$content":"\ud558\ud558, \uacfc\ucc2c\uc774\uc2ed\ub2c8\ub2e4.
+      ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":688.0,"y":-102.0},"guid":"99a34753-4ba9-46f0-a0fc-1ae172d8b1ec","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"15"},{"defaultValues":{"characterName":{"$content":"\ub369\ucee8
+      \uc655","$type":"System.String"},"sentence":{"$content":"\uacb8\uc190\ud558\uae34!
+      \uc7a5\uad70\ub4e4\uc758 \uc601\uc608\uc640 \uc2a4\ucf54\ud2c0\ub79c\ub4dc\uc758
+      \uc601\uad11\uc744 \uc704\ud558\uc5ec!","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":1034.0,"y":-107.0},"guid":"44bce5a1-aa14-4dfa-ba88-5473e8616b8e","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"17"},{"defaultValues":{"characterName":{"$content":"\uc0ac\ub78c\ub4e4","$type":"System.String"},"sentence":{"$content":"\uac74\ubc30!","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":1464.0,"y":-102.0},"guid":"c5f495aa-af1e-4784-8f43-b718630248f5","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"19"},{"defaultValues":{"characterName":{"$content":"\ub9ac\uc790","$type":"System.String"},"sentence":{"$content":"\uc544\uc544,
+      \uc624\ub298\uc740 \ub108\ubb34 \ubc14\ube74\uc5b4, \ub108\ubb34 \ud798\ub4e4\uc5b4.
+      \uc804\ud558\ub791 \uadc0\uc871\ub098\ub9ac\ub4e4 \ud589\ucc28\ud558\uc2e0\ub2e4\uace0
+      \ubb54 \uace0\uc0dd\uc774\ub78c. \ub9dd\ud560 \ub140\uc11d\ub4e4, \uc131\uac00\uc2e0
+      \uc77c\uac70\ub9ac\ub97c \ubab0\uc544\uc8fc\ub2e4\ub2c8! \ub355\ubd84\uc5d0
+      \ub098 \ud63c\uc790 \uc57c\uadfc\ud558\ub2e4 \uc774\uc81c \ub05d\ub0ac\uc5b4.
+      ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":288.0,"y":273.0},"guid":"89d6c7c1-d2fc-4a73-a6ac-e9f41d2f15ed","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"21"},{"chainable":false,"parameterNames":[],"member":{"name":"Play","parameterTypes":[],"targetType":"UnityEngine.AudioSource","targetTypeName":"UnityEngine.AudioSource","$version":"A"},"defaultValues":{"target":null},"position":{"x":725.0,"y":286.0},"guid":"70ce577b-e239-491d-a048-453b55a9b116","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"23"},{"defaultValues":{"characterName":{"$content":"\ub9ac","$type":"System.String"},"sentence":{"$content":"\u2026!
+      \ub204\uac00 \uc788\uc5b4. \uc601\uc8fc\ub2d8\uc774\ub791 \ub9c8\ub2d8? \uc65c
+      \uc774 \uc2dc\uac04\uc5d0 \u2026\uc77c\ub2e8 \uc228\uc790! ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":914.0,"y":277.0},"guid":"995dc233-6f15-4f93-8837-ee2a6b06e80b","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"27"},{"defaultValues":{"characterName":{"$content":"\ub9e5\ubca0\uc2a4","$type":"System.String"},"sentence":{"$content":"\ub09c
+      \ub450\ub835\uc18c. \uc6b0\ub9ac\uac00 \uc804\ud558\ub97c \uc8fd\uc778 \uac8c
+      \ub4e4\ud1b5\ub09c\ub2e4\uba74\u2026. ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":1372.0,"y":277.0},"guid":"1cc57c00-a435-4d06-9ca3-127c888835de","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"29"},{"defaultValues":{"characterName":{"$content":"\ub9e5\ubca0\uc2a4\ubd80\uc778","$type":"System.String"},"sentence":{"$content":"\uc27f,
+      \ub204\uac00 \ub4e4\uc744\ub77c. \uc870\uc6a9\ud788 \uc880 \ud574\uc694. \uc655\uc744
+      \uc8fd\uc600\uc73c\ub2c8 \ub0a8\uc740 \uac74 \uc190 \ub2e6\uace0 \ud558\uc778\ub4e4\uc5d0\uac8c
+      \ub4a4\uc9d1\uc5b4\uc50c\uc6cc \uc655\uc774 \ub418\ub294 \uac83 \ubfd0\uc774\uc5d0\uc694.
+      \ub450\ub824\uc6cc\ud560 \uac74 \uc804\ud600 \uc5c6\ub2e4\uace0\uc694. \uc790,
+      \uc190\uc5d0 \ud53c\ub0c4\uc0c8\uac00 \ubc30\uae30 \uc804\uc5d0 \uc5b4\uc11c
+      \uc190\uc774\ub098 \ub2e6\uc544\uc694. ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":1822.0,"y":277.0},"guid":"dcdcc1a8-53ee-4fed-844d-8c1775e31c0b","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"31"},{"chainable":false,"parameterNames":[],"member":{"name":"Play","parameterTypes":[],"targetType":"UnityEngine.AudioSource","targetTypeName":"UnityEngine.AudioSource","$version":"A"},"defaultValues":{"target":null},"position":{"x":2220.0,"y":277.0},"guid":"faa5e03d-6a8d-486e-913a-e8c1d844d5b7","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"33"},{"defaultValues":{"characterName":{"$content":"\ub9ac\uc790","$type":"System.String"},"sentence":{"$content":"\u2026\u2026\uadf8\ub7ec\ub2c8\uae50
+      \ub9c8\ub2d8\uc774\ub791 \uc601\uc8fc\ub2d8\uc774 \uc804\ud558\ub97c \uc8fd\uc600\ub2e4\uace0?
+      \u2026\ub3c4\ub110\ub4dc! \uc624\ub298 \uc804\ud558 \uce68\uc18c\uc5d0 \ubc30\uc815\ub410\ub294\ub370
+      \ubb34\uc0ac\ud558\ub824\ub098?  ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":2442.0,"y":262.0},"guid":"a3ae6957-f55f-45c1-bc7f-81175892ad4b","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"37"},{"defaultValues":{"characterName":{"$content":"\ub9ac","$type":"System.String"},"sentence":{"$content":"\u2026\uc8fd\uc9c4
+      \uc54a\uc558\uc9c0\ub9cc \ud53c\ub97c \ub4a4\uc9d1\uc5b4\uc37c\uc5b4. \ub3c4\ub110\ub4dc\uc5d0\uac8c
+      \uc8c4\ub97c \ub4a4\uc9d1\uc5b4\uc50c\uc6b8 \uc791\uc815\uc774\uc57c. \uc774\ub300\ub85c\ub77c\uba74
+      \ub3c4\ub110\ub4dc\ub294 \ubb3c\ub860\uc774\uace0 \uac00\uc871\uc778 \ub098\uae4c\uc9c0
+      \uc0ac\ud615\ub2f9\ud560\uac70\uc57c! \u2026\uc5b4\ub5bb\uac8c\ub4e0 \ud574\uc57c
+      \ud574. \uac00\uc9dc \uc99d\uac70\ub4e4\uc744 \uce58\uc6b0\ub4e0\uc9c0, \uc9c4\uc9dc
+      \uc99d\uac70\ub97c \ucc3e\uc544\ub0b4\ub4e0\uc9c0. ","$type":"System.String"},"characterImage":null,"autoHideDialog":{"$content":true,"$type":"System.Boolean"}},"position":{"x":2854.0,"y":264.0},"guid":"fc789c84-a5dc-4cb3-99ac-f25e7884fa41","$version":"A","$type":"SuperEasyRPG.ShowSentenceDialog","$id":"39"},{"sourceUnit":{"$ref":"13"},"sourceKey":"exit","destinationUnit":{"$ref":"15"},"destinationKey":"invoke","guid":"287309df-ac70-4a56-a332-871ade96b41b","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"exit","destinationUnit":{"$ref":"17"},"destinationKey":"invoke","guid":"ac385ae0-f798-49a3-9c6c-08500d53a6ed","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"exit","destinationUnit":{"$ref":"19"},"destinationKey":"invoke","guid":"2bbc42d8-1ed2-4594-a982-69c1475dd9d6","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"21"},"sourceKey":"exit","destinationUnit":{"$ref":"23"},"destinationKey":"enter","guid":"a38abbe3-e8de-4a1d-8af0-58ed6cd7f528","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"23"},"sourceKey":"exit","destinationUnit":{"$ref":"27"},"destinationKey":"invoke","guid":"92c1bb7e-206f-4930-87ec-40579408940e","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"27"},"sourceKey":"exit","destinationUnit":{"$ref":"29"},"destinationKey":"invoke","guid":"28eb196f-8617-4fe6-8aa7-6fdc20b81583","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"29"},"sourceKey":"exit","destinationUnit":{"$ref":"31"},"destinationKey":"invoke","guid":"98a0270d-f323-4bfb-9bc6-ae98fa9ae87c","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"exit","destinationUnit":{"$ref":"33"},"destinationKey":"enter","guid":"b19a4262-59f7-4183-b90f-af31b7786746","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"exit","destinationUnit":{"$ref":"37"},"destinationKey":"invoke","guid":"0600dbb9-cfe2-4fe8-97e4-98d35b537c90","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"37"},"sourceKey":"exit","destinationUnit":{"$ref":"39"},"destinationKey":"invoke","guid":"def3c5d7-7ca8-4b1e-b949-dd3d14d60371","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences: []
