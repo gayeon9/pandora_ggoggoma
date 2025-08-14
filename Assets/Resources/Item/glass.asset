@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 10
   itemName: Glass
-  itemLevel: 0
+  itemLevel: 1
   itemImage: {fileID: -108878718900169398, guid: b2f4bfbb71e158642bc78c9b4fbaf570, type: 3}
-  consumable: 0
+  isInventory: 0

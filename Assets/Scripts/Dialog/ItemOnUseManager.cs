@@ -9,6 +9,11 @@ public class ItemOnUseManager
     {
         switch (item.itemType)
         {
+            case ItemType.pail:
+                item.onUse = () => ExecutePail(item);
+                Debug.Log("Glass 아이템 델리게이트 변수에 함수 넣기 성공");
+                //
+                return true;
 
             case ItemType.Knifeb:
                 item.onUse = () => ExecuteKnifeb(item);
@@ -55,15 +60,39 @@ public class ItemOnUseManager
         }
     }
 
+
+    private static bool ExecutePail(Item item)
+    {
+        GameObject Scriptmachine = GameObject.Find("Scriptmachine");
+
+        switch (item.itemLevel)
+        {
+            case 1:
+                Debug.Log("Knifeb 아이템 델리게이트 변수있는 함수 호출 성공");
+                CustomEvent.Trigger(Scriptmachine, "PailEvent1");
+                return true;
+
+
+
+            case 2:
+                Debug.Log("Knifeb 아이템 델리게이트 변수있는 함수 호출 성공");
+                CustomEvent.Trigger(Scriptmachine, "PailEvent2");
+                return true;
+
+            default: return false;
+        }
+    }
+
+
     private static bool ExecuteKnifeb(Item item)
     {
         GameObject Scriptmachine = GameObject.Find("Scriptmachine");
 
         switch (item.itemLevel)
         {
-            case 0:
+            case 1:
                 Debug.Log("Knifeb 아이템 델리게이트 변수있는 함수 호출 성공");
-                CustomEvent.Trigger(Scriptmachine, "KnifeEvent");
+                CustomEvent.Trigger(Scriptmachine, "KnifebEvent1");
                 return true;
 
 
@@ -74,6 +103,8 @@ public class ItemOnUseManager
                 return true;
         }
     }
+
+
 
 
     private static bool ExecuteMouse(Item item)
@@ -103,30 +134,9 @@ public class ItemOnUseManager
                 CustomEvent.Trigger(Scriptmachine, "MouseEvent4");
                 return false;
 
-            /*
-               case 2:
-                  CustomEvent.Trigger(Scriptmachine, "MouseEvent2");
-                   item.consumable = false;
-                  return false;
-             */
-
-
             default:
                 return false;
         }
-    
-    
-/*
- *      public bool MouseEvent0_release(string itemType, int choiceIndex)
-    {
-        Debug.Log($"아이템 {itemType}, 선택지 {choiceIndex}");
-        // 여기서 후속 로직 실행
-        Inventory.instance.AddItem(item);
-
-        return true;
-
-    }
- */
 
     }
 
@@ -151,9 +161,15 @@ public class ItemOnUseManager
 
     private static bool ExecuteGlass(Item item)
     {
+        GameObject Scriptmachine = GameObject.Find("Scriptmachine");
+
         switch (item.itemLevel)
         {
-            case 0:  return true;
+            case 1:
+                CustomEvent.Trigger(Scriptmachine, "GlassEvent1"); return true;
+
+            case 2:
+                CustomEvent.Trigger(Scriptmachine, "GlassEvent2"); return true;
             default:
                 return true;
         }
@@ -170,7 +186,7 @@ public class ItemOnUseManager
                     DialogueMode.Dialogue
                     
                 );
-                  item.consumable = true;  //????? ????...?
+                  item.isInventory = true;  //??
 
                 return true;
 

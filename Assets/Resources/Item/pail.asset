@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9e040b8d49c7345a2f6ad5eb379056, type: 3}
   m_Name: pail
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 14
   itemName: 
-  itemLevel: 0
-  itemImage: {fileID: 0}
-  consumable: 0
+  itemLevel: 1
+  itemImage: {fileID: 1211113517990315155, guid: ebe24ef5a040ade4085bd1aefcb43e31, type: 3}
+  isInventory: 0

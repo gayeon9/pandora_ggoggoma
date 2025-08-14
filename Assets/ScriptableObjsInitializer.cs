@@ -1,36 +1,38 @@
-using System.Collections.Generic;
-using Mono.Cecil;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
-using UnityEngine.UI;
 
+[DefaultExecutionOrder(-2000)]
 public class ScriptableObjsInitializer : MonoBehaviour
 {
-    public Button initButton;
+    private static bool initialized = false;
 
-    private void Start()
+    private void Awake()
     {
-        initButton.onClick.AddListener(clicked);
-
-    }
-    private void clicked()
-    {
-        var ScriptableObjs = Resources.LoadAll<Item>("Item");
-        Debug.Log($"Loaded Items: {ScriptableObjs.Length}");
-        foreach (var ScriptableObj in ScriptableObjs)
-    {
-
-            ScriptableObj.itemLevel = 1;
-            if (ScriptableObj.itemType == ItemType.Mouse)
-            {
-                var spr = Resources.Load<Sprite>("UI/쥐_자는 쥐");
-                if (spr) ScriptableObj.itemImage = spr;
-            }
-
+        if (initialized)
+        {
+            Destroy(gameObject);
+            return;
         }
 
+        initialized = true;
+        RunInit();
+        Destroy(gameObject); // 초기화 후 자기 자신 제거
     }
 
+    private void RunInit()
+    {
+        var scriptableObjs = Resources.LoadAll<Item>("Item");
+        Debug.Log($"[ItemInitializer] Loaded Items: {scriptableObjs.Length}");
 
+        foreach (var so in scriptableObjs)
+        {
+            so.itemLevel = 1;
+            so.isInventory = false;
+            if (so.itemType == ItemType.Mouse)
+            {
+                var spr = Resources.Load<Sprite>("UI/쥐_자는 쥐");
+                Debug.Log(spr != null ? "Mouse 이미지 설정 완료" : "Mouse 이미지 로드 실패");
+                if (spr != null) so.itemImage = spr;
+            }
+        }
+    }
 }

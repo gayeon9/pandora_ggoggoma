@@ -13,14 +13,14 @@ public class SceneLoadModifer : MonoBehaviour
     void OnEnable()
     {
          
-        SceneManager.sceneLoaded += OnSceneLoadedinventory; //inventoryUI에서 refreshUI를 넣어줌
+      //  SceneManager.sceneLoaded += OnSceneLoadedinventory; //inventoryUI에서 refreshUI를 넣어줌
         SceneManager.sceneLoaded += OnSceneLoadedCamrea;  //카메라 추적 및 플레이어 위치 (0,0,0) 조정
         
     }
 
     void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoadedinventory;
+     //   SceneManager.sceneLoaded -= OnSceneLoadedinventory;
         SceneManager.sceneLoaded -= OnSceneLoadedCamrea;
 
     }

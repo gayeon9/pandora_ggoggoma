@@ -28,7 +28,7 @@ public class Item : ScriptableObject
     public string itemName;
     public int itemLevel;
     public Sprite itemImage;
-    public bool consumable;  // 사용 후 제거 여부
+    public bool isInventory;  // 사용 후 제거 여부
 
     // 클릭 시 실행할 행동 (직접 Inspector에서 연결은 불가, 코드에서 할당)
     public Func<bool> onUse;
@@ -38,9 +38,5 @@ public class Item : ScriptableObject
         return (onUse?.Invoke() ?? false) ;
     }
 
-    public void IncreaseLevel()
-    {
-        itemLevel++;
-        Debug.Log($"{itemName} 레벨이 {itemLevel}로 증가했습니다!");
-    }
+   
 }

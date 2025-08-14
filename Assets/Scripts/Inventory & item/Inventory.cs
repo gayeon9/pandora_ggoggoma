@@ -8,18 +8,35 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    #region Singleton
+
     public static Inventory instance;
-    private void Awake()
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Init()
     {
-        if (instance != null)
+        if (instance == null)
         {
-            Destroy(gameObject);
-            return;
+            // Resources/UI/InventoryCanvas.prefab 불러오기
+            GameObject canvasPrefab = Resources.Load<GameObject>("UI/InventoryCanvas");
+            if (canvasPrefab == null)
+            {
+                Debug.LogError("InventoryCanvas.prefab이 Resources/UI 폴더에 없습니다!");
+                return;
+            }
+
+            // 생성 후 DontDestroyOnLoad 적용
+            GameObject canvasInstance = Object.Instantiate(canvasPrefab);
+            DontDestroyOnLoad(canvasInstance);
+
+            // Inventory.cs 연결
+            instance = canvasInstance.GetComponentInChildren<Inventory>();
+            if (instance == null)
+            {
+                instance = canvasInstance.AddComponent<Inventory>();
+            }
+
+            Debug.Log($"[Inventory] 최초 생성됨. ID={instance.GetInstanceID()}");
         }
-        instance = this;
     }
-    #endregion
 
 
 
@@ -60,7 +77,7 @@ public class Inventory : MonoBehaviour
     {
         if (items.Count < SlotCnt)
         {
-            items.Add(_item);
+            items.Add(_item); _item.isInventory = true;
             if (onChangeItem != null)
                 onChangeItem.Invoke();
             return true;
@@ -78,7 +95,7 @@ public class Inventory : MonoBehaviour
     private GameObject mark;
 
 
-    public void AddItemAndDestroyFromField()
+    /*public void AddItemAndDestroyFromField()
     {
 
         if (AddItem(currentFieldItem.GetItem()))
@@ -94,7 +111,9 @@ public class Inventory : MonoBehaviour
             }
         }
 
-    }
+    }*/
+
+
     public bool HasItemType(ItemType type)
     {
         return items.Any(item => item.itemType == type);
@@ -124,7 +143,7 @@ public class Inventory : MonoBehaviour
 
         // (선택) 런타임 초기화 값 세팅
         // itemCopy.itemLevel = 0;   // 기본 레벨을 0으로 시작시키고 싶다면
-        // itemCopy.consumable = proto.consumable;
+        // itemCopy.isInventory = proto.isInventory;
 
         // (중요) 런타임 델리게이트 바인딩이 필요하다면 여기서 다시 연결
         // SO에는 델리게이트가 직렬화되지 않으니, 실행 시점에 재바인딩하세요.

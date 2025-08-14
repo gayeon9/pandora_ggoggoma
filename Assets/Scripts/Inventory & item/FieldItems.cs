@@ -18,7 +18,7 @@ public class FieldItems : MonoBehaviour
             itemImage = _item.itemImage,
             itemType = _item.itemType,
             onUse = _item.onUse,
-            consumable = _item.consumable
+            isInventory = _item.isInventory
         };
 
      //   image.sprite = item.itemImage;
@@ -41,8 +41,14 @@ public class FieldItems : MonoBehaviour
       //  Destroy(gameObject);
         
     }
-    
 
+    private void OnEnable()
+    {
+        if (item.isInventory)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 
     private void OnMouseDown()
 {
@@ -60,11 +66,8 @@ public class FieldItems : MonoBehaviour
             if (item.onUse == null)
             {
                ItemOnUseManager.Execute(item);
-            } 
-            if (item.Use()) { Inventory.instance.AddItem(item); Debug.Log("아이템 획득"); }
-            else Debug.Log("델리게이트 집어넣기는 성공, 획득은 실패");
-            
-  
+            }
+           item.Use();
 
         }
         else Debug.Log("도대체 왜 아이템이 null인 것임.");
